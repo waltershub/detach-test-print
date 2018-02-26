@@ -15,7 +15,10 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
-    }
+      "bundleIdentifier": "com.walter.detach"
+    },
+    "android": {
+     "package": "com.walter.detach"
+   }
   }
 }
