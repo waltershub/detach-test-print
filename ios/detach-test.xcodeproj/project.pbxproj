@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DA0F1043DF5441794916A10 /* libRNPrint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E29675CA4F5468C9330BEF6 /* libRNPrint.a */; };
+		A7BAFEA4B799436AA039317A /* libRNHTMLtoPDF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1ED3DF24C7848DE8CDA9496 /* libRNHTMLtoPDF.a */; };
 		B501732B1DC01252003445D9 /* EXShell.plist in Resources */ = {isa = PBXBuildFile; fileRef = B501732A1DC01252003445D9 /* EXShell.plist */; };
 		B56386491DB9693800A0598C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B56386481DB9693800A0598C /* AppDelegate.m */; };
 		B56386511DB9693800A0598C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56386501DB9693800A0598C /* Assets.xcassets */; };
@@ -22,8 +24,42 @@
 		EBB8117C1BFA0514F79CAF74 /* libPods-detach-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A88D15726AD99E8A257BC7 /* libPods-detach-test.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		595836902047043C00963432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1132585C1B99F348005E19FE;
+			remoteInfo = RNPrint;
+		};
+		595836922047043C00963432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 113258671B99F348005E19FE;
+			remoteInfo = RNPrintTests;
+		};
+		595836992047094900963432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 117405EF1B9954BF004425E1;
+			remoteInfo = RNHTMLtoPDF;
+		};
+		5958369B2047094900963432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 117405FA1B9954BF004425E1;
+			remoteInfo = RNHTMLtoPDFTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNHTMLtoPDF.xcodeproj; path = "../node_modules/react-native-html-to-pdf/ios/RNHTMLtoPDF.xcodeproj"; sourceTree = "<group>"; };
 		2C1548D9E4CB1AEFA5CCAE6D /* Pods-detach-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-detach-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-detach-test/Pods-detach-test.debug.xcconfig"; sourceTree = "<group>"; };
+		3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNPrint.xcodeproj; path = "../node_modules/react-native-print/ios/RNPrint.xcodeproj"; sourceTree = "<group>"; };
+		6E29675CA4F5468C9330BEF6 /* libRNPrint.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNPrint.a; sourceTree = "<group>"; };
 		A47FE4D7F70906B7DC8CE39B /* Pods-detach-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-detach-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-detach-test/Pods-detach-test.release.xcconfig"; sourceTree = "<group>"; };
 		B501732A1DC01252003445D9 /* EXShell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EXShell.plist; sourceTree = "<group>"; };
 		B56386411DB9693800A0598C /* detach-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "detach-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +76,7 @@
 		B5CFBF4E1EDE419400B4BE24 /* EXBuildConstants.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EXBuildConstants.plist; sourceTree = "<group>"; };
 		B5DB047E1F3A684600E91581 /* shell-app-manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "shell-app-manifest.json"; sourceTree = "<group>"; };
 		B5DB047F1F3A684600E91581 /* shell-app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shell-app.bundle"; sourceTree = "<group>"; };
+		C1ED3DF24C7848DE8CDA9496 /* libRNHTMLtoPDF.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNHTMLtoPDF.a; sourceTree = "<group>"; };
 		C4A88D15726AD99E8A257BC7 /* libPods-detach-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-detach-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -49,6 +86,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB8117C1BFA0514F79CAF74 /* libPods-detach-test.a in Frameworks */,
+				9DA0F1043DF5441794916A10 /* libRNPrint.a in Frameworks */,
+				A7BAFEA4B799436AA039317A /* libRNHTMLtoPDF.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +102,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5958368B2047043900963432 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				6E29675CA4F5468C9330BEF6 /* libRNPrint.a */,
+				C1ED3DF24C7848DE8CDA9496 /* libRNHTMLtoPDF.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		5958368C2047043A00963432 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				595836912047043C00963432 /* libRNPrint.a */,
+				595836932047043C00963432 /* RNPrintTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		595836952047094900963432 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5958369A2047094900963432 /* libRNHTMLtoPDF.a */,
+				5958369C2047094900963432 /* RNHTMLtoPDFTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5B29BC350A332C58878A9F13 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +138,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		80F4D7B729444511840F95AC /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */,
+				19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		B56386381DB9693800A0598C = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +154,8 @@
 				B56386421DB9693800A0598C /* Products */,
 				5B29BC350A332C58878A9F13 /* Pods */,
 				1A42804E64B7E9E0AB8B6799 /* Frameworks */,
+				80F4D7B729444511840F95AC /* Libraries */,
+				5958368B2047043900963432 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,12 +226,12 @@
 		B56386391DB9693800A0598C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 900;
 				ORGANIZATIONNAME = "650 Industries, Inc.";
 				TargetAttributes = {
 					B56386401DB9693800A0598C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = C8D8QTF339;
+						DevelopmentTeam = MRJEMK8UU2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -170,12 +247,53 @@
 			mainGroup = B56386381DB9693800A0598C;
 			productRefGroup = B56386421DB9693800A0598C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 595836952047094900963432 /* Products */;
+					ProjectRef = 19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */;
+				},
+				{
+					ProductGroup = 5958368C2047043A00963432 /* Products */;
+					ProjectRef = 3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B56386401DB9693800A0598C /* detach-test */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		595836912047043C00963432 /* libRNPrint.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNPrint.a;
+			remoteRef = 595836902047043C00963432 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		595836932047043C00963432 /* RNPrintTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RNPrintTests.xctest;
+			remoteRef = 595836922047043C00963432 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5958369A2047094900963432 /* libRNHTMLtoPDF.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNHTMLtoPDF.a;
+			remoteRef = 595836992047094900963432 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5958369C2047094900963432 /* RNHTMLtoPDFTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RNHTMLtoPDFTests.xctest;
+			remoteRef = 5958369B2047094900963432 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B563863F1DB9693800A0598C /* Resources */ = {
@@ -409,9 +527,14 @@
 			baseConfigurationReference = 2C1548D9E4CB1AEFA5CCAE6D /* Pods-detach-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C8D8QTF339;
+				DEVELOPMENT_TEAM = MRJEMK8UU2;
 				INFOPLIST_FILE = "$(SRCROOT)/detach-test/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.walter.detach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -423,9 +546,14 @@
 			baseConfigurationReference = A47FE4D7F70906B7DC8CE39B /* Pods-detach-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C8D8QTF339;
+				DEVELOPMENT_TEAM = MRJEMK8UU2;
 				INFOPLIST_FILE = "$(SRCROOT)/detach-test/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.walter.detach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
