@@ -1,8 +1,9 @@
 import React from 'react';
-import { Button, Image, View, Text } from 'react-native';
+import { Button, Image, View, Text, CameraRoll } from 'react-native';
 import { ImagePicker, Permissions } from 'expo';
 import RNPrint from 'react-native-print';
 import RNHTMLtoPDF from 'react-native-html-to-pdf';
+import PDFLib, { PDFDocument, PDFPage } from 'react-native-pdf-lib';
 
 export default class ImagePickerExample extends React.Component {
   state = {
@@ -10,6 +11,7 @@ export default class ImagePickerExample extends React.Component {
     status: null,
     selectPrinter: null,
     base64: null,
+    exif: null,
   };
 
   componentDidMount() {
@@ -18,6 +20,7 @@ export default class ImagePickerExample extends React.Component {
 
   _getPermissions = async () => {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
+    Permissions.askAsync(Permissions.CAMERA_ROLL);
     if (status === 'granted') this.setState({ status: true });
   };
 
@@ -26,17 +29,63 @@ export default class ImagePickerExample extends React.Component {
     this.setState({ selectedPrinter });
   };
 
+  printPdfLib = async jpgPath => {
+    const page2 = PDFPage.create()
+      .setMediaBox(200, 200)
+      .drawText('You can add text and rectangles to the PDF!', {
+        x: 5,
+        y: 235,
+        color: '#007386',
+      })
+      .drawRectangle({
+        x: 25,
+        y: 25,
+        width: 150,
+        height: 150,
+        color: '#FF99CC',
+      })
+      .drawRectangle({
+        x: 75,
+        y: 75,
+        width: 50,
+        height: 50,
+        color: '#99FFCC',
+      });
+
+    const page1 = PDFPage.create()
+      .setMediaBox(250, 250)
+      .drawText('You can add JPG images too!')
+      .drawImage(jpgPath, 'jpg', {
+        x: 5,
+        y: 125,
+        width: 200,
+        height: 100,
+      });
+
+    const docsDir = await PDFLib.getDocumentsDirectory();
+    const pdfPath = `${docsDir}/sample.pdf`;
+    PDFDocument.create(pdfPath)
+      .addPages(page1)
+      .write() // Returns a promise that resolves with the PDF's path
+      .then(path => {
+        console.log('PDF created at: ' + path);
+        RNPrint.print({ filePath: path });
+        // Do stuff with your shiny new PDF!
+      });
+  };
+
   _pickImage = async () => {
-    let result = await ImagePicker.launchCameraAsync({
+    let result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
       aspect: [4, 3],
       base64: true,
+      exif: true,
     });
 
     //console.log(result);
 
     if (!result.cancelled) {
-      this.setState({ image: result.uri, base64: result.base64 });
+      this.setState({ image: result.uri, base64: result.base64, exif: result.exif });
     }
   };
 
@@ -48,7 +97,11 @@ export default class ImagePickerExample extends React.Component {
 
   async printPDF(image) {
     const results = await RNHTMLtoPDF.convert({
-      html: `<center><h1 style="width:20px;height:20px;">Visitor</h1><h1>NAME: Walter Shub</h1><img src="data:image/png;base64,${image}" width="600" height="600" /></center>`,
+      html: `<div style="flex-direction: column;">
+              <text style="font-size: 75px;">Visitor</text>
+              <text style="font-size: 50px;">NAME: Walter Shub</text>
+              <img src="data:image/png;base64,${image}" width="400" height="400" />
+            </div>`,
       fileName: 'test',
       base64: true,
     });
@@ -60,7 +113,9 @@ export default class ImagePickerExample extends React.Component {
     let { base64 } = this.state;
     let { image } = this.state;
     let { selectedPrinter } = this.state;
+    let { exif } = this.state;
     console.log(selectedPrinter);
+    console.log(image);
     if (!this.state.status) {
       return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -81,6 +136,7 @@ export default class ImagePickerExample extends React.Component {
           {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
           <Button title="print pdf" onPress={() => this.printPDF(base64)} />
           <Button title="print html" onPress={() => this.printHTML(base64)} />
+          <Button title="creat pdf" onPress={() => this.printPdfLib(image)} />
         </View>
       );
     }
