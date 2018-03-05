@@ -4,7 +4,8 @@ import { ImagePicker, Permissions } from 'expo';
 import RNPrint from 'react-native-print';
 import RNHTMLtoPDF from 'react-native-html-to-pdf';
 import PDFLib, { PDFDocument, PDFPage } from 'react-native-pdf-lib';
-
+import uniqueId from 'lodash.uniqueid';
+import moment from 'moment';
 export default class ImagePickerExample extends React.Component {
   state = {
     image: null,
@@ -75,7 +76,7 @@ export default class ImagePickerExample extends React.Component {
   };
 
   _pickImage = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
+    let result = await ImagePicker.launchCameraAsync({
       allowsEditing: true,
       aspect: [4, 3],
       base64: true,
@@ -97,9 +98,17 @@ export default class ImagePickerExample extends React.Component {
 
   async printPDF(image) {
     const results = await RNHTMLtoPDF.convert({
-      html: `<div style="flex-direction: column;">
-              <text style="font-size: 75px;">Visitor</text>
-              <text style="font-size: 50px;">NAME: Walter Shub</text>
+      html: `<div style="display: flex;flex-direction: column;align-items: center;">
+              <div style="display: flex;flex-direction: row;align-items: center;" >
+              <img src="http://www.repticity.com/beta/images/logos/8816phoenix.png" alt="Smiley face" width="150" height="250">
+              <h3 style="font-size: 30px;" >Rehabilitation and Health Care Center</h3>
+              </div>
+              <h1 style="font-size: 30px;border-bottom: 5px solid black;border-top: 5px solid black; padding:0 500px;padding-bottom:20px; padding-Top:20px">Visitor</h1>
+              <h2 style="font-size: 30px;">Name: Walter Shub</h2>
+              <h2 style="font-size: 30px;">${moment().format(' MMMM Do YYYY')}</h2>
+              <h2 style="font-size: 30px;">Visit ID: ${uniqueId(
+                Math.floor(Math.random() * 100 + 1)
+              )}</h2>
               <img src="data:image/png;base64,${image}" width="400" height="400" />
             </div>`,
       fileName: 'test',
