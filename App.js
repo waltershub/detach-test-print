@@ -99,17 +99,36 @@ export default class ImagePickerExample extends React.Component {
   async printPDF(image) {
     const results = await RNHTMLtoPDF.convert({
       html: `<div style="display: flex;flex-direction: column;align-items: center;">
-              <div style="display: flex;flex-direction: row;align-items: center;" >
-              <img src="http://www.repticity.com/beta/images/logos/8816phoenix.png" alt="Smiley face" width="150" height="250">
-              <h3 style="font-size: 30px;" >Rehabilitation and Health Care Center</h3>
+              <div style="display: flex;flex-direction: row;align-items: center; justify-content: center;border-bottom: 5px solid black; padding:0 500px;padding-bottom:20px; padding-Top:20p" >
+              <img src="http://www.repticity.com/beta/images/logos/8816phoenix.png" style="filter: grayscale(100%);" width="300" height="300">
+              <Text style="font-size: 250px;x">Visitor</Text>
               </div>
-              <h1 style="font-size: 30px;border-bottom: 5px solid black;border-top: 5px solid black; padding:0 500px;padding-bottom:20px; padding-Top:20px">Visitor</h1>
-              <h2 style="font-size: 30px;">Name: Walter Shub</h2>
-              <h2 style="font-size: 30px;">${moment().format(' MMMM Do YYYY')}</h2>
-              <h2 style="font-size: 30px;">Visit ID: ${uniqueId(
+              <h2 style="font-size: 70px;">Name: Walter Shub</h2>
+              <h2 style="font-size: 70px;">${moment().format(' MMMM Do YYYY')}</h2>
+              <h2 style="font-size: 70px;">Visit ID: ${uniqueId(
                 Math.floor(Math.random() * 100 + 1)
               )}</h2>
-              <img src="data:image/png;base64,${image}" width="400" height="400" />
+            <img src="data:image/png;base64,${image}" width="350" height="350"  style="transform:;" />
+            </div>`,
+      fileName: 'test',
+      base64: true,
+    });
+
+    await RNPrint.print({ filePath: results.filePath });
+  }
+  async printPDFLandscape(image) {
+    const results = await RNHTMLtoPDF.convert({
+      html: `<div style="display: flex;flex-direction: column;align-items: center;transform: rotate(90deg);">
+              <div style="display: flex;flex-direction: row;align-items: center; justify-content: center;border-bottom: 5px solid black; padding:0 500px;padding-bottom:20px; padding-Top:20p" >
+              <img src="http://www.repticity.com/beta/images/logos/8816phoenix.png" style="filter: grayscale(100%);" width="300" height="300">
+              <Text style="font-size: 250px;x">Visitor</Text>
+              </div>
+              <Text style="font-size: 70px;">Name: Walter Shub</Text>
+              <Text style="font-size: 70px;">${moment().format(' MMMM Do YYYY')}</Text>
+              <Text style="font-size: 70px;">Visit ID: ${uniqueId(
+                Math.floor(Math.random() * 100 + 1)
+              )}</Text>
+            <img src="data:image/png;base64,${image}" width="350" height="350"  style="transform:;" />
             </div>`,
       fileName: 'test',
       base64: true,
@@ -144,6 +163,7 @@ export default class ImagePickerExample extends React.Component {
           <Button title="Pick an image from camera roll" onPress={this._pickImage} />
           {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
           <Button title="print pdf" onPress={() => this.printPDF(base64)} />
+          <Button title="print pdf landscape" onPress={() => this.printPDFLandscape(base64)} />
           <Button title="print html" onPress={() => this.printHTML(base64)} />
           <Button title="creat pdf" onPress={() => this.printPdfLib(image)} />
         </View>
@@ -151,3 +171,49 @@ export default class ImagePickerExample extends React.Component {
     }
   }
 }
+
+// `<div style="display: flex;flex-direction: column;align-items: center;justify-content: center;transform: rotate(90deg);">
+//        <div style="display: flex;flex-direction: row;align-items: center;justify-content: center;" >
+//        <img src="http://www.repticity.com/beta/images/logos/8816phoenix.png" alt="Smiley face" width="200" height="150">
+//        <h3 style="font-size: 30px;" >Rehabilitation and Health Care Center</h3>
+//        </div>
+//          <h1 style="align-self:'center'; font-size: 30px;border-bottom: 5px solid black;border-top: 5px solid black; padding:0 500px;padding-bottom:20px; padding-Top:20px">Visitor</h1>
+//          <div style="display: flex;flex-direction: row;align-items: center;justify-content:  space-between;" >
+//            <div>
+//              <h2 style="font-size: 30px;">Name: Walter Shub</h2>
+//              <h2 style="font-size: 30px;">${moment().format(' MMMM Do YYYY')}</h2>
+//              <h2 style="font-size: 30px;">Visit ID: ${uniqueId(
+//                Math.floor(Math.random() * 100 + 1)
+//              )}</h2>
+//            </div>
+//            <img src="data:image/png;base64,${image}" width="200" height="200" align="top"> />
+//          </div>
+//      </div>`,
+
+// `<div style="display: flex;flex-direction: column;align-items: center;transform: rotate(90deg);">
+//         <div style="display: flex;flex-direction: row;align-items: center;justify-content: center;" >
+//         <img src="http://www.repticity.com/beta/images/logos/8816phoenix.png" alt="Smiley face" width="200" height="150">
+//         <h3 style="font-size: 30px;" >Rehabilitation and Health Care Center</h3>
+//         </div>
+//           <h1 style="a font-size: 30px;border-bottom: 5px solid black;border-top: 5px solid black; padding:0 500px;padding-bottom:20px; padding-Top:20px">Visitor</h1>
+//               <h2 style="font-size: 30px;">Name: Walter Shub</h2>
+//               <h2 style="font-size: 30px;">${moment().format(' MMMM Do YYYY')}</h2>
+//               <h2 style="font-size: 30px;">Visit ID: ${uniqueId(
+//                 Math.floor(Math.random() * 100 + 1)
+//               )}</h2>
+//             <img src="data:image/png;base64,${image}" width="200" height="200" > />
+//       </div>`,
+
+// `<div style="display: flex;flex-direction: column;align-items: center;">
+//         <div style="display: flex;flex-direction: row;align-items: center; justify-content: center;" >
+//         <img src="http://www.repticity.com/beta/images/logos/8816phoenix.png" alt="Smiley face" width="200" height="200">
+//         <h3 style="font-size: 30px;" >Rehabilitation and Health Care Center</h3>
+//         </div>
+//         <h1 style="font-size: 40px;border-bottom: 5px solid black;border-top: 5px solid black; padding:0 500px;padding-bottom:20px; padding-Top:20px">Visitor</h1>
+//         <h2 style="font-size: 30px;">Name: Walter Shub</h2>
+//         <h2 style="font-size: 30px;">${moment().format(' MMMM Do YYYY')}</h2>
+//         <h2 style="font-size: 30px;">Visit ID: ${uniqueId(
+//           Math.floor(Math.random() * 100 + 1)
+//         )}</h2>
+//       <img src="data:image/png;base64,${image}" width="200" height="200"  style="transform:;" />
+//       </div>`,
