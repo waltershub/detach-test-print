@@ -108,7 +108,7 @@ export default class ImagePickerExample extends React.Component {
               <h2 style="font-size: 70px;">Visit ID: ${uniqueId(
                 Math.floor(Math.random() * 100 + 1)
               )}</h2>
-            <img src="data:image/png;base64,${image}" width="350" height="350"  style="transform:;" />
+            <img src="data:image/png;base64,${image}" width="500" height="500"  style="filter:contrast(400%) brightness(150%)" />
             </div>`,
       fileName: 'test',
       base64: true,

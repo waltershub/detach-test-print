@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35689D8423B6463B8AFE9463 /* libRNPDFLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB805D98256402F85F8B287 /* libRNPDFLib.a */; };
-		4914B81E78ED4D27ABCE1AA4 /* Times New Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8CA6C286AAC47DF8C865AE5 /* Times New Roman.ttf */; };
+		57D6A9ABA6EA455386F9BD21 /* libRNPDFLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FFC22C18CE41A4B4C05A9B /* libRNPDFLib.a */; };
+		729805318AAC4CC68D192F4A /* Times New Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8353F610F7BF4BCBBA4C11EA /* Times New Roman.ttf */; };
 		9DA0F1043DF5441794916A10 /* libRNPrint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E29675CA4F5468C9330BEF6 /* libRNPrint.a */; };
 		A7BAFEA4B799436AA039317A /* libRNHTMLtoPDF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1ED3DF24C7848DE8CDA9496 /* libRNHTMLtoPDF.a */; };
 		B501732B1DC01252003445D9 /* EXShell.plist in Resources */ = {isa = PBXBuildFile; fileRef = B501732A1DC01252003445D9 /* EXShell.plist */; };
@@ -27,53 +27,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		595836902047043C00963432 /* PBXContainerItemProxy */ = {
+		59BECB7B207E529100371526 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1132585C1B99F348005E19FE;
-			remoteInfo = RNPrint;
-		};
-		595836922047043C00963432 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 113258671B99F348005E19FE;
-			remoteInfo = RNPrintTests;
-		};
-		595836992047094900963432 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 117405EF1B9954BF004425E1;
-			remoteInfo = RNHTMLtoPDF;
-		};
-		5958369B2047094900963432 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 117405FA1B9954BF004425E1;
-			remoteInfo = RNHTMLtoPDFTests;
-		};
-		595836A82047217E00963432 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5363DBAC1EE422C8AC93EF6 /* RNPDFLib.xcodeproj */;
+			containerPortal = B02796A31B2342B9AE014470 /* RNPDFLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNPdfLib;
 		};
+		59BECB7F207E529100371526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F09EDE2C603F4FD49F35E84E /* RNPrint.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1132585C1B99F348005E19FE;
+			remoteInfo = RNPrint;
+		};
+		59BECB81207E529100371526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F09EDE2C603F4FD49F35E84E /* RNPrint.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 113258671B99F348005E19FE;
+			remoteInfo = RNPrintTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DB805D98256402F85F8B287 /* libRNPDFLib.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNPDFLib.a; sourceTree = "<group>"; };
-		19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNHTMLtoPDF.xcodeproj; path = "../node_modules/react-native-html-to-pdf/ios/RNHTMLtoPDF.xcodeproj"; sourceTree = "<group>"; };
+		27FFC22C18CE41A4B4C05A9B /* libRNPDFLib.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNPDFLib.a; sourceTree = "<group>"; };
 		2C1548D9E4CB1AEFA5CCAE6D /* Pods-detach-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-detach-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-detach-test/Pods-detach-test.debug.xcconfig"; sourceTree = "<group>"; };
-		3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNPrint.xcodeproj; path = "../node_modules/react-native-print/ios/RNPrint.xcodeproj"; sourceTree = "<group>"; };
 		6E29675CA4F5468C9330BEF6 /* libRNPrint.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNPrint.a; sourceTree = "<group>"; };
+		8353F610F7BF4BCBBA4C11EA /* Times New Roman.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Times New Roman.ttf"; path = "../node_modules/react-native-pdf-lib/assets/Times New Roman.ttf"; sourceTree = "<group>"; };
 		A47FE4D7F70906B7DC8CE39B /* Pods-detach-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-detach-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-detach-test/Pods-detach-test.release.xcconfig"; sourceTree = "<group>"; };
-		A8CA6C286AAC47DF8C865AE5 /* Times New Roman.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Times New Roman.ttf"; path = "../node_modules/react-native-pdf-lib/assets/Times New Roman.ttf"; sourceTree = "<group>"; };
+		B02796A31B2342B9AE014470 /* RNPDFLib.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNPDFLib.xcodeproj; path = "../node_modules/react-native-pdf-lib/ios/RNPDFLib.xcodeproj"; sourceTree = "<group>"; };
 		B501732A1DC01252003445D9 /* EXShell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EXShell.plist; sourceTree = "<group>"; };
-		B5363DBAC1EE422C8AC93EF6 /* RNPDFLib.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNPDFLib.xcodeproj; path = "../node_modules/react-native-pdf-lib/ios/RNPDFLib.xcodeproj"; sourceTree = "<group>"; };
 		B56386411DB9693800A0598C /* detach-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "detach-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56386471DB9693800A0598C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B56386481DB9693800A0598C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +74,7 @@
 		B5DB047F1F3A684600E91581 /* shell-app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shell-app.bundle"; sourceTree = "<group>"; };
 		C1ED3DF24C7848DE8CDA9496 /* libRNHTMLtoPDF.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNHTMLtoPDF.a; sourceTree = "<group>"; };
 		C4A88D15726AD99E8A257BC7 /* libPods-detach-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-detach-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F09EDE2C603F4FD49F35E84E /* RNPrint.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNPrint.xcodeproj; path = "../node_modules/react-native-print/ios/RNPrint.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +85,7 @@
 				EBB8117C1BFA0514F79CAF74 /* libPods-detach-test.a in Frameworks */,
 				9DA0F1043DF5441794916A10 /* libRNPrint.a in Frameworks */,
 				A7BAFEA4B799436AA039317A /* libRNHTMLtoPDF.a in Frameworks */,
-				35689D8423B6463B8AFE9463 /* libRNPDFLib.a in Frameworks */,
+				57D6A9ABA6EA455386F9BD21 /* libRNPDFLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,33 +105,24 @@
 			children = (
 				6E29675CA4F5468C9330BEF6 /* libRNPrint.a */,
 				C1ED3DF24C7848DE8CDA9496 /* libRNHTMLtoPDF.a */,
-				0DB805D98256402F85F8B287 /* libRNPDFLib.a */,
+				27FFC22C18CE41A4B4C05A9B /* libRNPDFLib.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		5958368C2047043A00963432 /* Products */ = {
+		59BECB76207E529100371526 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				595836912047043C00963432 /* libRNPrint.a */,
-				595836932047043C00963432 /* RNPrintTests.xctest */,
+				59BECB7C207E529100371526 /* libRNPDFLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		595836952047094900963432 /* Products */ = {
+		59BECB78207E529100371526 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5958369A2047094900963432 /* libRNHTMLtoPDF.a */,
-				5958369C2047094900963432 /* RNHTMLtoPDFTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		595836A52047217E00963432 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				595836A92047217E00963432 /* libRNPDFLib.a */,
+				59BECB80207E529100371526 /* libRNPrint.a */,
+				59BECB82207E529100371526 /* RNPrintTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,7 +139,7 @@
 		5EE82EEE94B842A6A6DEC1BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A8CA6C286AAC47DF8C865AE5 /* Times New Roman.ttf */,
+				8353F610F7BF4BCBBA4C11EA /* Times New Roman.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -171,9 +147,8 @@
 		80F4D7B729444511840F95AC /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */,
-				19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */,
-				B5363DBAC1EE422C8AC93EF6 /* RNPDFLib.xcodeproj */,
+				B02796A31B2342B9AE014470 /* RNPDFLib.xcodeproj */,
+				F09EDE2C603F4FD49F35E84E /* RNPrint.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -281,16 +256,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 595836952047094900963432 /* Products */;
-					ProjectRef = 19F0BE6231C9452891919D29 /* RNHTMLtoPDF.xcodeproj */;
+					ProductGroup = 59BECB76207E529100371526 /* Products */;
+					ProjectRef = B02796A31B2342B9AE014470 /* RNPDFLib.xcodeproj */;
 				},
 				{
-					ProductGroup = 595836A52047217E00963432 /* Products */;
-					ProjectRef = B5363DBAC1EE422C8AC93EF6 /* RNPDFLib.xcodeproj */;
-				},
-				{
-					ProductGroup = 5958368C2047043A00963432 /* Products */;
-					ProjectRef = 3B88BECBE74F4527A2B4AAB0 /* RNPrint.xcodeproj */;
+					ProductGroup = 59BECB78207E529100371526 /* Products */;
+					ProjectRef = F09EDE2C603F4FD49F35E84E /* RNPrint.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -301,39 +272,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		595836912047043C00963432 /* libRNPrint.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNPrint.a;
-			remoteRef = 595836902047043C00963432 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		595836932047043C00963432 /* RNPrintTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RNPrintTests.xctest;
-			remoteRef = 595836922047043C00963432 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5958369A2047094900963432 /* libRNHTMLtoPDF.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNHTMLtoPDF.a;
-			remoteRef = 595836992047094900963432 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5958369C2047094900963432 /* RNHTMLtoPDFTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RNHTMLtoPDFTests.xctest;
-			remoteRef = 5958369B2047094900963432 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		595836A92047217E00963432 /* libRNPDFLib.a */ = {
+		59BECB7C207E529100371526 /* libRNPDFLib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRNPDFLib.a;
-			remoteRef = 595836A82047217E00963432 /* PBXContainerItemProxy */;
+			remoteRef = 59BECB7B207E529100371526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59BECB80207E529100371526 /* libRNPrint.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNPrint.a;
+			remoteRef = 59BECB7F207E529100371526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59BECB82207E529100371526 /* RNPrintTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RNPrintTests.xctest;
+			remoteRef = 59BECB81207E529100371526 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -353,7 +310,7 @@
 				B5DB04801F3A684600E91581 /* shell-app-manifest.json in Resources */,
 				B5DB04811F3A684600E91581 /* shell-app.bundle in Resources */,
 				B56386511DB9693800A0598C /* Assets.xcassets in Resources */,
-				4914B81E78ED4D27ABCE1AA4 /* Times New Roman.ttf in Resources */,
+				729805318AAC4CC68D192F4A /* Times New Roman.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,8 +534,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.walter.detach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -596,8 +551,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.walter.detach;
