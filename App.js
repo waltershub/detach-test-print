@@ -92,7 +92,7 @@ export default class ImagePickerExample extends React.Component {
 
   async printHTML(image) {
     await RNPrint.print({
-      html: `<h2>Visitor</h2><h3>NAME: Walter Shub</h3><img src="data:image/png;base64,${image}" width="50" height="50" />`,
+      html: '<h1>Heading 1</h1>',
     });
   }
 
@@ -119,16 +119,21 @@ export default class ImagePickerExample extends React.Component {
   async printPDFLandscape(image) {
     const results = await RNHTMLtoPDF.convert({
       html: `<div style="display: flex;flex-direction: column;align-items: center;transform: rotate(90deg);">
-              <div style="display: flex;flex-direction: row;align-items: center; justify-content: center;border-bottom: 5px solid black; padding:0 500px;padding-bottom:20px; padding-Top:20p" >
-              <img src="http://www.repticity.com/beta/images/logos/8816phoenix.png" style="filter: grayscale(100%);" width="300" height="300">
-              <Text style="font-size: 250px;x">Visitor</Text>
+              <div style="display: flex;flex-direction: row;align-items: center; justify-content: center;border-bottom: 5px solid black; padding:0 100px;padding-bottom:20px; margin-left:200px" >
+              <img src="http://www.repticity.com/beta/images/logos/8816phoenix.png" style="filter: grayscale(100%);" width="250" height="150">
+              <Text style="font-size: 200px;x">Visitor</Text>
               </div>
-              <Text style="font-size: 70px;">Name: Walter Shub</Text>
-              <Text style="font-size: 70px;">${moment().format(' MMMM Do YYYY')}</Text>
-              <Text style="font-size: 70px;">Visit ID: ${uniqueId(
+              <div style="display: flex;flex-direction: row;margin-left:20px;margin-Top:100px" >
+              <div style="display: flex;flex-direction: column;align-items:left">
+              <Text style="font-size: 40px;">Name: Walter Shub</Text>
+              <Text style="font-size: 40px;">${moment().format(' MMMM Do YYYY')}</Text>
+              <Text style="font-size: 40px;">Visit ID: ${uniqueId(
                 Math.floor(Math.random() * 100 + 1)
               )}</Text>
-            <img src="data:image/png;base64,${image}" width="350" height="350"  style="transform:;" />
+          </div>
+
+            <img src="data:image/png;base64,${image}" width="300" height="300"  style="margin-left:20px;align-self:right;" />
+            </div>
             </div>`,
       fileName: 'test',
       base64: true,
