@@ -92,7 +92,7 @@ export default class ImagePickerExample extends React.Component {
 
   async printHTML(image) {
     await RNPrint.print({
-      html: '<h1>Heading 1</h1>',
+      html: `<style>html, body { width: 2cm; height: 2cm; }</style><h3>hi</h3>`,
     });
   }
 
@@ -108,7 +108,7 @@ export default class ImagePickerExample extends React.Component {
               <h2 style="font-size: 70px;">Visit ID: ${uniqueId(
                 Math.floor(Math.random() * 100 + 1)
               )}</h2>
-            <img src="data:image/png;base64,${image}" width="500" height="500"  style="filter:contrast(400%) brightness(150%)" />
+            <img src="data:image/png;base64,${image}" width="500" height="500"  style="filter:contrast(400%) brightness(250%)" />
             </div>`,
       fileName: 'test',
       base64: true,
