@@ -14,6 +14,6 @@
 	<key>STANDALONE_CONTEXT_TYPE</key>
 	<string>user</string>
 	<key>developmentUrl</key>
-	<string>expe0ca09003689435f82c5730ecbc49582://5g-dfg.waltershub.detach-test.exp.direct:80</string>
+	<string>expe0ca09003689435f82c5730ecbc49582://localhost:80</string>
 </dict>
 </plist>

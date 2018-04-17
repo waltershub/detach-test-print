@@ -91,9 +91,11 @@ export default class ImagePickerExample extends React.Component {
   };
 
   async printHTML(image) {
-    await RNPrint.print({
+    let test =await RNPrint.print({
       html: `<style>html, body { width: 2cm; height: 2cm; }</style><h3>hi</h3>`,
     });
+
+    console.log('yayayaya', test)
   }
 
   async printPDF(image) {
@@ -114,7 +116,8 @@ export default class ImagePickerExample extends React.Component {
       base64: true,
     });
 
-    await RNPrint.print({ filePath: results.filePath });
+  let test =  await RNPrint.print({ filePath: results.filePath });
+  console.log('yayayayayayyayayayaya',test)
   }
   async printPDFLandscape(image) {
     const results = await RNHTMLtoPDF.convert({
